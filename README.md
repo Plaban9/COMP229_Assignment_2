@@ -1,6 +1,6 @@
-﻿# comp229-crud
+﻿# comp229-Assignment
 
-You will need to have a local mongodb up and then you can run these both commands on the root folder of this project.
+You will need to have a local Mongodb up and then you can run both these commands on the root folder of this project.
 
 ```
 npm i
