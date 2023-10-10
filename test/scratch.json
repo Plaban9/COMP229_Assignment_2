@@ -1,0 +1,9 @@
+{
+    "name": "Water Sipper Blue 1L",
+    "description": "A 1000ml water bottle in blue color.",
+    "price": 5.99,
+    "quantity": 25,
+    "category": "Water Bottles"
+}
+
+//db.product.insert({"name":"Water Sipper Blue 1L","description":"A 1000ml water bottle in blue color.","price":5.99,"quantity":25,"category":"Water Bottles"});
