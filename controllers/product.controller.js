@@ -72,7 +72,7 @@ module.exports.create = async (req, res) =>
     else
     {
         resultJson = { "ERROR!!": "Create key not supplied" };
-        res.json(result);
+        res.json(resultJson);
     }
 }
 
@@ -97,7 +97,42 @@ module.exports.update = async (req, res) =>
     }
     else
     {
-        resultJson = { "ERROR!!": "Create key not supplied" };
+        resultJson = { "ERROR!!": "Update key not supplied" };
+        res.json(resultJson);
+    }
+}
+
+module.exports.delete = async (req, res) =>
+{
+    // Delete a product specified in update key specified by id
+    try 
+    {
+        // DOC: https://mongoosejs.com/docs/api/model.html#Model.findByIdAndDelete()
+        let result = await Product.findByIdAndDelete(req.params.id);
         res.json(result);
+    }
+    catch (exception) 
+    {
+        console.log(exception);
+        var resultJson = {};
+        res.json(resultJson);
+    }
+}
+
+module.exports.deleteAll = async (req, res) =>
+{
+    // Delete all products
+    try 
+    {
+        // DOC: https://mongoosejs.com/docs/api/model.html#Model.deleteMany()
+        var emptyJson = {};
+        let result = await Product.deleteMany(emptyJson);
+        res.json(result);
+    }
+    catch (exception) 
+    {
+        console.log(exception);
+        var resultJson = {};
+        res.json(resultJson);
     }
 }

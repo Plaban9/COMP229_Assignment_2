@@ -15,8 +15,13 @@ router.get('/:id', productController.findById);
 // Create Product by create key
 router.post('/', productController.create);
 
-// Get Product by name - URL: api/product/:id
+// Update Product by id - URL: api/product/:id
 router.put('/:id', productController.update);
 
+// Get Product by name - URL: api/product/:id
+router.delete('/deleteAll', productController.deleteAll);
+
+// Delete Product by id - URL: api/product/:id
+router.delete('/:id', productController.delete);
 
 module.exports = router;
