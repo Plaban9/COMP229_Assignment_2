@@ -45,25 +45,59 @@ module.exports.findById = async (req, res) =>
     }
 }
 
-module.exports.update = async (req, res) =>
+module.exports.create = async (req, res) =>
 {
-    console.log(req.params);
-    try 
+    if (req.body.create)
     {
-        let result = await Product.findByIdAndUpdate({ "_id": req.params.id });
-        res.json(result);
+        // Add new product specified in create key 
+        try 
+        {
+            // DOC: https://mongoosejs.com/docs/api/model.html#Model.create()
+            // Create triggers 'Save' anyways (Enter JSON Array or a single JSON)
+            // Need to parse it as a JSON Object - https://stackoverflow.com/questions/68430558/how-to-access-object-with-req-body-in-mongoose
+            let result = await Product.create(JSON.parse(req.body.create));
+            res.json(result);
+
+            // const product = new Product(req.body.create);
+            // let result = await product.save();
+            // res.json(result);
+        }
+        catch (exception) 
+        {
+            console.log(exception);
+            var resultJson = {};
+            res.json(resultJson);
+        }
     }
-    catch (exception) 
+    else
     {
-        console.log(exception);
-        var emptyJson = {};
-        res.json(emptyJson);
+        resultJson = { "ERROR!!": "Create key not supplied" };
+        res.json(result);
     }
 }
 
-module.exports.save = async (req, res) =>
+module.exports.update = async (req, res) =>
 {
-    const product = new Product(req.body);
-    let result = await product.save();
-    res.json(result);
+    if (req.body.update)
+    {
+        // Update a product specified in update key specified by id
+        try 
+        {
+            // DOC: https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()
+            // Need to parse it as a JSON Object - https://stackoverflow.com/questions/68430558/how-to-access-object-with-req-body-in-mongoose
+            let result = await Product.findByIdAndUpdate(req.params.id, JSON.parse(req.body.update));
+            res.json(result);
+        }
+        catch (exception) 
+        {
+            console.log(exception);
+            var resultJson = {};
+            res.json(resultJson);
+        }
+    }
+    else
+    {
+        resultJson = { "ERROR!!": "Create key not supplied" };
+        res.json(result);
+    }
 }
