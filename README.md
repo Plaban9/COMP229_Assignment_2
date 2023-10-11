@@ -1,6 +1,8 @@
-﻿# COMP-229|Assignment-2
+﻿# COMP - 229 | Assignment - 2
 
 You will need to have a local MongoDB up and then you can run both these commands on the root folder of this project.
+
+
 
 
 # To Setup MongoDB
@@ -13,12 +15,17 @@ You will need to have a local MongoDB up and then you can run both these command
   - ```db.categories.insert({"name": "Men"});```
 
 
+
+
 # To start the server
 - Install all the node modules using ```npm i```.
 - Check the port number and replace it in [app.js](/app.js) under the function main if the port number doesn't match.
 - Run the project using ```npx nodemon```.
 
+
+
 # Test JSON and JSON Array for insert operations in Product Document
+
 JSON
 ```
 {
