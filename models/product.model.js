@@ -6,6 +6,6 @@ var productsSchema = new mongoose.Schema({
     price: Number,
     quantity: Number,
     category: String
-}, { collection: 'product' }); // defined it explicitly, SO THAT IT DOES NOT TRY TO BE SMART AND ADD AN EXTRA 'S' IN THE DATABASE NAME.
+}, { collection: 'product' }); // defined it explicitly, SO THAT IT DOES NOT TRY TO BE SMART AND ADD AN EXTRA 'S' IN THE COLLECTION NAME.
 
 module.exports = mongoose.model('product', productsSchema);
