@@ -31,10 +31,9 @@ module.exports.find = async (req, res) =>
 module.exports.findById = async (req, res) =>
 {
     // DOC - findById(): https://mongoosejs.com/docs/api/model.html#Model.findById()
-
     try 
     {
-        let result = await Product.find({ "_id": req.params.id });
+        let result = await Product.findById(req.params.id);
         res.json(result);
     }
     catch (exception) 

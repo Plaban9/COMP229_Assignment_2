@@ -1,3 +1,6 @@
+// For test only
+
+// Sample JSON Object
 {
     "name": "Water Sipper Blue 1L",
     "description": "A 1000ml water bottle in blue color.",
@@ -6,6 +9,7 @@
     "category": "Water Bottles"
 }
 
+// Sample JSON Array
 [
     {
         "_id": "6524b0cceaffbd606b2bb850",
