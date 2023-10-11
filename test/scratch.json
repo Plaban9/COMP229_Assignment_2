@@ -1,4 +1,4 @@
-// For test only
+// For formatting JSON and writing stuff that may be helpful
 
 // Sample JSON Object
 {
@@ -11,22 +11,30 @@
 
 // Sample JSON Array
 [
-    {
-        "name": "Water Sipper Blue 1L",
-        "description": "A 1000ml water bottle in blue color.",
-        "price": 5.99,
-        "quantity": 25,
-        "category": "Water Bottles"
-    },
-    {
-        "name": "CloseUp Toothpaste",
-        "description": "Mint Flavoured 150g",
-        "price": 4.99,
-        "quantity": 25,
-        "category": "Personal Hygiene"
-    }
+  {
+    "name": "Water Sipper Blue 2L",
+    "description": "A 2L water bottle in blue colour.",
+    "price": 8.99,
+    "quantity": 15,
+    "category": "Water Bottles"
+  },
+  {
+    "name": "Colgate Plax 2L Peppermint",
+    "description": "Peppermint flavour mouthwash (2L).",
+    "price": 15.99,
+    "quantity": 20,
+    "category": "Oral Hygiene"
+  },
+  {
+    "name": "Colgate Mint Gel Toothpaste 100g x2",
+    "description": "Mint flavour gel toothpaste (100g - Pack of 2)",
+    "price": 10.99,
+    "quantity": 25,
+    "category": "Oral Hygiene"
+  }
 ]
 
-//MongoDB Queries
+
+//MongoDB insert Queries
 //db.product.insert({"name":"Water Sipper Blue 1L","description":"A 1000ml water bottle in blue color.","price":5.99,"quantity":25,"category":"Water Bottles"});
 //db.categories.insert({"name": "Men"});
