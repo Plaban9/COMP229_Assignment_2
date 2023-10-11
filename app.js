@@ -13,7 +13,7 @@ var databaseString = "marketplace";
 
 async function main()
 {
-  mongoose.set('debug', true);
+  // mongoose.set('debug', true);
   // mongoose.set('bufferCommands', false);
   await mongoose.connect('mongodb://127.0.0.1:27017/marketplace').catch(error => handleError(error));;
 

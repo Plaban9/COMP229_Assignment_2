@@ -14,15 +14,16 @@ module.exports.find = async (req, res) =>
         }
         catch (exception) 
         {
-            console.log(exception);
+            // console.log(exception);
             var emptyJson = {};
             res.json(emptyJson);
         }
     }
     else
     {
-        // Get all Products - URL: api/product/
-        let result = await Product.find(req.params);
+        // Get all Products - URL: api/product/ empty JSON for All
+        var emptyJson = {};
+        let result = await Product.find(emptyJson);
         res.json(result);
     }
 }
@@ -38,7 +39,7 @@ module.exports.findById = async (req, res) =>
     }
     catch (exception) 
     {
-        console.log(exception);
+        // console.log(exception);
         var emptyJson = {};
         res.json(emptyJson);
     }
@@ -63,7 +64,7 @@ module.exports.create = async (req, res) =>
         }
         catch (exception) 
         {
-            console.log(exception);
+            // console.log(exception);
             var resultJson = {};
             res.json(resultJson);
         }
@@ -89,7 +90,7 @@ module.exports.update = async (req, res) =>
         }
         catch (exception) 
         {
-            console.log(exception);
+            // console.log(exception);
             var resultJson = {};
             res.json(resultJson);
         }
@@ -112,7 +113,7 @@ module.exports.delete = async (req, res) =>
     }
     catch (exception) 
     {
-        console.log(exception);
+        // console.log(exception);
         var resultJson = {};
         res.json(resultJson);
     }
@@ -130,7 +131,7 @@ module.exports.deleteAll = async (req, res) =>
     }
     catch (exception) 
     {
-        console.log(exception);
+        // console.log(exception);
         var resultJson = {};
         res.json(resultJson);
     }
