@@ -12,7 +12,6 @@
 // Sample JSON Array
 [
     {
-        "_id": "6524b0cceaffbd606b2bb850",
         "name": "Water Sipper Blue 1L",
         "description": "A 1000ml water bottle in blue color.",
         "price": 5.99,
@@ -20,7 +19,6 @@
         "category": "Water Bottles"
     },
     {
-        "_id": "6524cb4067f287473d13a91c",
         "name": "CloseUp Toothpaste",
         "description": "Mint Flavoured 150g",
         "price": 4.99,
@@ -29,6 +27,6 @@
     }
 ]
 
-//MongoDB Entries
+//MongoDB Queries
 //db.product.insert({"name":"Water Sipper Blue 1L","description":"A 1000ml water bottle in blue color.","price":5.99,"quantity":25,"category":"Water Bottles"});
 //db.categories.insert({"name": "Men"});
